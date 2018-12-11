@@ -43,7 +43,7 @@
       });
 
       map = new Map({
-        basemap: "none",
+        basemap: "dark",
         layers: [layerGNV,layer,layerEstaciones]
       });
 
@@ -76,14 +76,14 @@
           view:mainView,
           allPlaceholder: "búsqueda rápida"
         });
-     
+
       mainView.ui.add(search,{
         position:"top-left",
         index:0
       });
 
-      
-      
+
+
 
       var legend = new Legend({
         view: mainView
@@ -101,14 +101,14 @@
 
        mainView.ui.add(bgExpand, "bottom-right");
 
-     
+
 
       mainView
         .when(maintainFixedExtent)
         .then(disablePopupOnClick)
         .then(enableHighlightOnPointerMove);
         //.then(disableNavigation)
-  
+
 
       function maintainFixedExtent(view) {
         var fixedExtent = view.extent.clone();
@@ -167,9 +167,9 @@
                 }
               });
           });
-          
+
         });
-        
+
        /* view.whenLayerView(layerGNV).then(function(layerView) {
           view.on("pointer-move", function(event) {
             view.hitTest(event)
@@ -266,7 +266,7 @@
         return view;
       }
 
-    }); 
+    });
 
 
 
@@ -303,7 +303,7 @@
   	"esri/renderers/SimpleRenderer",
   	"esri/widgets/LayerList",
   	"esri/widgets/Expand",
-  	
+
   	"esri/widgets/Track",
     "esri/widgets/Legend",
   	"dojo/domReady!"], function(Map,MapView,FeatureLayer,Search,Home,Locate,BasemapToggle,ScaleBar,SimpleFillSymbol,SimpleRenderer,LayerList,
@@ -312,7 +312,7 @@
     	map = new Map({
       	basemap: "dark-gray",
      	});
-  	
+
   	var view= new MapView({
   		container:"viewMap",
   		map:map,
@@ -326,7 +326,7 @@
   	};
 
 
-  	  	
+
 
   	var dptosRenderer={
     		type:"simple",
@@ -351,7 +351,7 @@
        	popupTemplate: template,
        	renderer: dptosRenderer
        });
-       
+
 
 
        //CAPA CENTROS POBLADOS
@@ -370,7 +370,7 @@
         }
        });
 
-       
+
 
       var search = new Search({
     			view:view,
@@ -402,7 +402,7 @@
     		view:view,
     		unit: "dual"
     	});
-    	view.ui.add(scale,{ 
+    	view.ui.add(scale,{
     		position:"bottom-left"
     	});
 
@@ -435,12 +435,12 @@
               }]
             });
      view.ui.add(legend, "bottom-right");
-     
+
     view.ui.add(layerlstExpand,"top-right");
     /*view.ui.add(layerlst,{
     	position:"top-left"
     });
-    	
+
     	var track= new Track({
     		view:view
     	});
@@ -465,14 +465,3 @@
     		});
     		view.ui.add(print);
     	});*/
-
-    	
-
-
-  	
-
-     
-      
-
-
-
